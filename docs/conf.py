@@ -14,7 +14,7 @@ extensions = [
 html_theme = "sphinx_rtd_theme"
 
 master_doc = "index"
-project = "template_project_python"
-copyright = "2023, twyleg"
-author = "Torsten Wylegala"
+project = "3D Engine Python"
+copyright = "2024, Marvin-VW"
+author = "Marvin Lorenz"
 version = release = __version__
