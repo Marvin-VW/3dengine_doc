@@ -7,7 +7,7 @@ The `vectors` module provides utilities for vector operations and normal calcula
 Classes
 --------
 
-.. autoclass:: vectors.CalculateNormal
+.. autoclass:: utils.vectors.CalculateNormal
    :members:
    :undoc-members:
    :inherited-members:

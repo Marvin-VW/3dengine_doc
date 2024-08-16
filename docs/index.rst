@@ -13,7 +13,7 @@ This project is a 3D engine written in Python using OpenCV and NumPy. The engine
    introduction
    modules/installation
    modules/camera_model
-   modules/clipping_Space
+   modules/clipping_space
    modules/color
    modules/fps_counter
    modules/matrix_functions

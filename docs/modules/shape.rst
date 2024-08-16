@@ -7,17 +7,17 @@ The `shape` module contains the definitions for `Triangle4D`, `Cube`, and `Recta
 Classes
 --------
 
-.. autoclass:: shape.Triangle4D
+.. autoclass:: utils.shape.Triangle4D
    :members:
    :undoc-members:
    :inherited-members:
 
-.. autoclass:: shape.Cube
+.. autoclass:: utils.shape.Cube
    :members:
    :undoc-members:
    :inherited-members:
 
-.. autoclass:: shape.Rectangle
+.. autoclass:: utils.shape.Rectangle
    :members:
    :undoc-members:
    :inherited-members:

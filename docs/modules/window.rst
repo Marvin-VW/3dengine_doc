@@ -7,7 +7,7 @@ The `window` module handles the creation and management of windows for camera an
 Classes
 --------
 
-.. autoclass:: window.Window
+.. autoclass:: utils.window.Window
    :members:
    :undoc-members:
    :inherited-members:
