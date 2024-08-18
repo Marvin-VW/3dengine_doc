@@ -4,25 +4,55 @@
 
 Welcome to the 3D Engine documentation!
 
-This project is a 3D engine written in Python using OpenCV and NumPy. The engine includes features such as perspective projection, object clipping, lighting, and FPS calculation. Below you will find detailed documentation on the different modules and classes used in this project.
+This project is a 3D engine written in Python using OpenCV and NumPy. The engine includes features such as backface culling, object clipping, basic lighting, and FPS calculation. Below, you will find comprehensive documentation covering the various modules and classes used in this project.
+
+.. note::
+
+   This project is under development.
+
+Getting Started
+===============
+
+Before diving into the details, make sure to follow the setup instructions in the installation guide.
+
+.. toctree::
+   :maxdepth: 1
+
+   installation
+
+Understanding the Render Pipeline
+=================================
+
+For a better grasp of how this 3D engine works, check out the render pipeline. It outlines the step-by-step process that the engine follows to transform and render 3D objects onto the screen.
+
+.. toctree::
+   :maxdepth: 1
+
+   pipeline
+
+Exploring the Modules
+=====================
+
+If you're interested in understanding the inner workings of the engine, take a deeper look into the documentation for each module. These sections will provide detailed explanations of the core components, including shapes, camera models, matrix transformations, and more.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-   introduction
-   modules/installation
+   modules/main
+   modules/shape
+   modules/importer
    modules/camera_model
+   modules/matrix_functions
+   modules/vectors
    modules/clipping_space
+   modules/window
    modules/color
    modules/fps_counter
-   modules/matrix_functions
-   modules/shape
-   modules/vectors
-   modules/window
 
-Indices and tables
+Indices and Tables
 ==================
+
+Use the indices and search functionality to quickly locate specific information within the documentation.
 
 * :ref:`genindex`
 * :ref:`modindex`

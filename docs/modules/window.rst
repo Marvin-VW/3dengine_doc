@@ -1,62 +1,336 @@
-===============================
-Window Module
-===============================
+.. _window_module:
 
-The `window` module handles the creation and management of windows for camera and cube settings using OpenCV.
+Window Class
+============
 
-Classes
+The `Window` class provides an interface for interacting with camera and cube systems in a graphical environment using OpenCV. It allows the user to control the position, rotation, and scale of both systems using trackbars and mouse events.
+
+Overview
 --------
 
-.. autoclass:: utils.window.Window
-   :members:
-   :undoc-members:
-   :inherited-members:
+The `Window` class is designed to manage the interaction between a camera system and a cube system in a 3D space. It provides methods for handling user input through OpenCV windows, trackbars, and mouse events.
 
-Methods
---------
+Class
+-----
 
-- `Window.__init__()`: Initializes the window with default settings and creates trackbars for camera and cube parameters.
+.. class:: Window
 
-- `Window.window_creator()`: Creates the OpenCV windows and trackbars for adjusting camera and cube settings.
+    **Methods:**
 
-- `Window.toggle_normal(value)`: Toggles the display of normals.
+    .. method:: __init__()
 
-- `Window.toggle_planes(value)`: Toggles the display of planes.
+        Initializes the `Window` class, setting up initial parameters for the camera and cube systems and creating the necessary OpenCV windows and trackbars.
 
-- `Window.toggle_points(value)`: Toggles the display of points.
+        **Example:**
 
-- `Window.window_show(class_cam)`: Displays the camera image in the "image window".
+        .. code-block:: python
+            :caption: Example of creating a `Window` object
 
-- `Window.get_camera_system_translation_x()`: Gets the X translation value for the camera system.
+            window = Window()
 
-- `Window.get_camera_system_translation_y()`: Gets the Y translation value for the camera system.
+    .. method:: window_creator()
 
-- `Window.get_camera_system_translation_z()`: Gets the Z translation value for the camera system.
+        Creates and configures the OpenCV windows and trackbars for the camera and cube settings.
 
-- `Window.get_camera_system_rotation_roll()`: Gets the roll rotation value for the camera system.
+        **Example:**
 
-- `Window.get_camera_system_rotation_pitch()`: Gets the pitch rotation value for the camera system.
+        .. code-block:: python
+            :caption: Example of creating the windows
 
-- `Window.get_camera_system_rotation_yaw()`: Gets the yaw rotation value for the camera system.
+            window.window_creator()
 
-- `Window.get_cube_system_translation_x()`: Gets the X translation value for the cube system.
+    .. method:: toggle_normal(value)
 
-- `Window.get_cube_system_translation_y()`: Gets the Y translation value for the cube system.
+        Toggles the display of normals on or off based on the trackbar value.
 
-- `Window.get_cube_system_translation_z()`: Gets the Z translation value for the cube system.
+        **Parameters:**
+        - `value`: The value from the "Normals" trackbar.
 
-- `Window.get_cube_system_rotation_roll()`: Gets the roll rotation value for the cube system.
+        **Example:**
 
-- `Window.get_cube_system_rotation_pitch()`: Gets the pitch rotation value for the cube system.
+        .. code-block:: python
+            :caption: Example of toggling normals
 
-- `Window.get_cube_system_rotation_yaw()`: Gets the yaw rotation value for the cube system.
+            window.toggle_normal(1)
 
-- `Window.get_cube_system_scale()`: Gets the scale value for the cube system.
+    .. method:: toggle_planes(value)
 
-- `Window.nothing(value)`: A placeholder function for trackbar callbacks.
+        Toggles the display of planes on or off based on the trackbar value.
 
-- `Window.handle_movement()`: Handles camera movement based on user input.
+        **Parameters:**
+        - `value`: The value from the "Planes" trackbar.
 
-- `Window.move_camera(direction, speed)`: Moves the camera in the specified direction with the given speed.
+        **Example:**
 
-- `Window.mouse_event_handler(event, x, y, flags, param)`: Handles mouse events for rotating the camera.
+        .. code-block:: python
+            :caption: Example of toggling planes
+
+            window.toggle_planes(1)
+
+    .. method:: toggle_points(value)
+
+        Toggles the display of points on or off based on the trackbar value.
+
+        **Parameters:**
+        - `value`: The value from the "Points" trackbar.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of toggling points
+
+            window.toggle_points(1)
+
+    .. method:: window_show(class_cam)
+
+        Displays the camera image in the "image window" using the provided camera class.
+
+        **Parameters:**
+        - `class_cam`: An instance of a camera class containing the `camera_image` attribute.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of showing the window
+
+            window.window_show(camera_instance)
+
+    .. method:: get_camera_system_translation_x()
+
+        Retrieves the current X translation value of the camera system from the trackbar.
+
+        **Returns:**
+        - The X translation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the X translation of the camera system
+
+            x_translation = window.get_camera_system_translation_x()
+
+    .. method:: get_camera_system_translation_y()
+
+        Retrieves the current Y translation value of the camera system from the trackbar.
+
+        **Returns:**
+        - The Y translation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the Y translation of the camera system
+
+            y_translation = window.get_camera_system_translation_y()
+
+    .. method:: get_camera_system_translation_z()
+
+        Retrieves the current Z translation value of the camera system from the trackbar.
+
+        **Returns:**
+        - The Z translation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the Z translation of the camera system
+
+            z_translation = window.get_camera_system_translation_z()
+
+    .. method:: get_camera_system_rotation_roll()
+
+        Retrieves the current roll rotation value of the camera system from the trackbar.
+
+        **Returns:**
+        - The roll rotation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the roll rotation of the camera system
+
+            roll_rotation = window.get_camera_system_rotation_roll()
+
+    .. method:: get_camera_system_rotation_pitch()
+
+        Retrieves the current pitch rotation value of the camera system from the trackbar.
+
+        **Returns:**
+        - The pitch rotation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the pitch rotation of the camera system
+
+            pitch_rotation = window.get_camera_system_rotation_pitch()
+
+    .. method:: get_camera_system_rotation_yaw()
+
+        Retrieves the current yaw rotation value of the camera system from the trackbar.
+
+        **Returns:**
+        - The yaw rotation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the yaw rotation of the camera system
+
+            yaw_rotation = window.get_camera_system_rotation_yaw()
+
+    .. method:: get_cube_system_translation_x()
+
+        Retrieves the current X translation value of the cube system from the trackbar.
+
+        **Returns:**
+        - The X translation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the X translation of the cube system
+
+            x_translation = window.get_cube_system_translation_x()
+
+    .. method:: get_cube_system_translation_y()
+
+        Retrieves the current Y translation value of the cube system from the trackbar.
+
+        **Returns:**
+        - The Y translation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the Y translation of the cube system
+
+            y_translation = window.get_cube_system_translation_y()
+
+    .. method:: get_cube_system_translation_z()
+
+        Retrieves the current Z translation value of the cube system from the trackbar.
+
+        **Returns:**
+        - The Z translation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the Z translation of the cube system
+
+            z_translation = window.get_cube_system_translation_z()
+
+    .. method:: get_cube_system_rotation_roll()
+
+        Retrieves the current roll rotation value of the cube system from the trackbar.
+
+        **Returns:**
+        - The roll rotation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the roll rotation of the cube system
+
+            roll_rotation = window.get_cube_system_rotation_roll()
+
+    .. method:: get_cube_system_rotation_pitch()
+
+        Retrieves the current pitch rotation value of the cube system from the trackbar.
+
+        **Returns:**
+        - The pitch rotation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the pitch rotation of the cube system
+
+            pitch_rotation = window.get_cube_system_rotation_pitch()
+
+    .. method:: get_cube_system_rotation_yaw()
+
+        Retrieves the current yaw rotation value of the cube system from the trackbar.
+
+        **Returns:**
+        - The yaw rotation value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the yaw rotation of the cube system
+
+            yaw_rotation = window.get_cube_system_rotation_yaw()
+
+    .. method:: get_cube_system_scale()
+
+        Retrieves the current scale value of the cube system from the trackbar.
+
+        **Returns:**
+        - The scale value as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of getting the scale of the cube system
+
+            scale = window.get_cube_system_scale()
+
+    .. staticmethod:: nothing(value)
+
+        A static method that does nothing. Used as a placeholder for trackbar callbacks.
+
+        **Parameters:**
+        - `value`: The value passed by the trackbar.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of using the `nothing` method
+
+            cv.createTrackbar("dummy", "window", 0, 100, Window.nothing)
+
+    .. method:: handle_movement()
+
+        Handles keyboard input for camera movement. The camera can be moved forward, backward, left, right, up, or down using the WASDQE keys.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of handling camera movement
+
+            window.handle_movement()
+
+    .. method:: move_camera(direction, speed)
+
+        Moves the camera in the specified direction at the given speed.
+
+        **Parameters:**
+        - `direction`: The direction to move the camera. Can be 'forward', 'backward', 'left', 'right', 'up', or 'down'.
+        - `speed`: The speed of the movement as an integer.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of moving the camera
+
+            window.move_camera('forward', 100)
+
+    .. method:: mouse_event_handler(event, x, y, flags, param)
+
+        Handles mouse events, allowing the user to rotate the camera using the mouse.
+
+        **Parameters:**
+        - `event`: The type of mouse event.
+        - `x`: The x-coordinate of the mouse event.
+        - `y`: The y-coordinate of the mouse event.
+        - `flags`: Additional flags for the mouse event.
+        - `param`: Additional parameters.
+
+        **Example:**
+
+        .. code-block:: python
+            :caption: Example of handling a mouse event
+
+            cv.setMouseCallback("image window", window.mouse_event_handler)

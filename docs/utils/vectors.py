@@ -58,6 +58,9 @@ class CalculateNormal:
 
         return scaled_normal, normal_start, normal_end, centroid
     
+
+class Shadow:
+    
     @staticmethod
     def get_shadow(triangles, light_vec):
 
@@ -66,7 +69,7 @@ class CalculateNormal:
 
         for triangle in triangles:
             for point in triangle.world_points:
-                shadow_points.append(CalculateNormal.find_intersection(plane_normal, point[:3].flatten(), light_vec))
+                shadow_points.append(Shadow.find_intersection(plane_normal, point[:3].flatten(), light_vec))
 
         unique_array = list(map(np.array, set(tuple(arr) for arr in shadow_points)))
         shadow_points = []

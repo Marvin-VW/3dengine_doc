@@ -10,7 +10,7 @@ from utils.structure import OBJ_Importer
 from utils.color import Color
 from utils.clipping_space import Clipping_Space
 from utils.fps_counter import FpsCounter
-from utils.vectors import CalculateNormal
+from utils.vectors import CalculateNormal, Shadow
 
 class Engine:
 
@@ -77,7 +77,7 @@ class Engine:
 
             sorted_list = sorted(visiable_triangles, key=lambda triangle: triangle.centroids[2], reverse=True)
 
-            shadow_points = CalculateNormal.get_shadow(self.mesh_list, light_direction)
+            shadow_points = Shadow.get_shadow(self.mesh_list, light_direction)
             shadow_points_camera = self.camera_model.world_transform(shadow_points, self.C_T_V)
             self.camera_model.draw_poly(shadow_points_camera)
 
@@ -94,4 +94,4 @@ class Engine:
             self.window.window_show(self.camera_model)
 
 engine = Engine()
-engine.main()
+#engine.main()
