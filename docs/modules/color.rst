@@ -3,115 +3,96 @@
 Color Module
 ============
 
-This module provides the `Color` class, which includes predefined color constants and several static methods for color manipulation, including generating random colors, adjusting color intensity, and converting between color spaces.
+This module, named `camera_model`, provides functionalities for color manipulation and light intensity calculations. The primary class in this module is `Color`, which contains a variety of color constants and methods for color operations.
 
-Overview
---------
 
-The `Color` class includes a variety of predefined color constants, each represented as a tuple of BGR (Blue, Green, Red) values. Additionally, it provides methods for random color selection, intensity calculation, and color space conversion.
+.. class:: Color()
 
-Classes
--------
+The `Color` class contains numerous predefined colors and provides methods to manipulate these colors and calculate light intensity.
 
-.. class:: Color
+    **Class Attributes**
 
-    A class containing color constants and static methods for color manipulation.
+    - **ALICE_BLUE**, **ANTIQUEMENT_WHITE**, ..., **YELLOW_GREEN**: These are predefined colors represented as tuples in BGR format.
 
-    **Class Attributes:**
-
-    The following attributes represent predefined colors as BGR tuples:
-
-    - `ALICE_BLUE = (255, 248, 240)`
-    - `ANTIQUE_WHITE = (215, 235, 250)`
-    - `AQUA = (255, 255, 0)`
-    - ...
-
-    **Methods:**
+    **Methods**
 
     .. method:: RandomColor()
 
-        Selects a random color from the predefined color constants.
+    - Returns a random color from the predefined set of colors.
 
-        **Returns:**
-        - A tuple representing a random color in BGR format.
+    .. code-block:: python
+        :linenos:
 
-        **Example:**
+        @classmethod
+        def RandomColor(cls):
+            color_names = [attr for attr in dir(cls) if not callable(getattr(cls, attr))]
+            random_color_name = random.choice(color_names)
+            return getattr(cls, random_color_name)
 
-        .. code-block:: python
-            :caption: Example of `RandomColor` method
+---------------------------------------------------------------------------------------
 
-            random_color = Color.RandomColor()
+    .. method:: intensity()
+    
+    - This method computes the intensity of light as the dot product between the normalized light direction and the normal vector.
 
-    .. method:: intensity(light_direction, normal)
+    - The result is then negated to ensure that positive values indicate illumination.
 
-        Calculates the light intensity on a surface based on the light direction and the surface normal.
+    .. note::
+        The 'light intensity' is controlled by the Lightness component of the HSL model, which is why the :mod:`bgr_to_hsl` and :mod:`hsl_to_bgr` modules are used.
 
-        **Parameters:**
-        - `light_direction`: A 1D `numpy.array` representing the direction of the light source.
-        - `normal`: A 1D `numpy.array` representing the normal vector of the surface.
+    .. code-block:: python
+        :linenos:
 
-        **Returns:**
-        - A `float` representing the intensity of the light on the surface.
+        @staticmethod
+        def intensity(light_direction, normal):
+            norm = np.linalg.norm(light_direction)
+            normalized_light_direction = light_direction / norm
+            intensity = np.dot(normalized_light_direction, normal) * (-1)
+            return intensity
 
-        **Example:**
+------------------------------------------------------------------------------------------------
 
-        .. code-block:: python
-            :caption: Example of `intensity` method
+    .. method:: bgr_to_hsl()
 
-            intensity_value = Color.intensity(light_direction, normal)
+    - Converts a BGR color tuple to an HSL (Hue, Saturation, Lightness) representation.
 
-    .. method:: bgr_to_hsl(b, g, r)
+    .. code-block:: python
+        :linenos:
+        :emphasize-lines: 2, 3
 
-        Converts a BGR color to HSL (Hue, Saturation, Lightness) format.
+        @staticmethod
+        def bgr_to_hsl(b, g, r):
+            return colorsys.rgb_to_hls(r/255.0, g/255.0, b/255.0)
 
-        **Parameters:**
-        - `b`: Blue component (0-255).
-        - `g`: Green component (0-255).
-        - `r`: Red component (0-255).
+------------------------------------------------------------------------------------------------
 
-        **Returns:**
-        - A tuple `(h, l, s)` where `h` is hue, `l` is lightness, and `s` is saturation.
+   .. method::  hsl_to_bgr()
 
-        **Example:**
+    - Converts HSL values back to a BGR tuple.
 
-        .. code-block:: python
-            :caption: Example of `bgr_to_hsl` method
+    .. code-block:: python
+        :linenos:
+        :emphasize-lines: 2, 3
 
-            h, l, s = Color.bgr_to_hsl(255, 128, 0)
+        @staticmethod
+        def hsl_to_bgr(h, l, s):
+            r, g, b = colorsys.hls_to_rgb(h, l, s)
+            return int(b * 255), int(g * 255), int(r * 255)
 
-    .. method:: hsl_to_bgr(h, l, s)
+------------------------------------------------------------------------------------------------
 
-        Converts an HSL color to BGR format.
+    .. method:: adjust_bgr_intensity()
 
-        **Parameters:**
-        - `h`: Hue component (0-1).
-        - `l`: Lightness component (0-1).
-        - `s`: Saturation component (0-1).
+    - Adjusts the intensity of a BGR color by modifying its lightness.
 
-        **Returns:**
-        - A tuple `(b, g, r)` where `b`, `g`, and `r` are the blue, green, and red components (0-255).
+    .. code-block:: python
+        :linenos:
+        :emphasize-lines: 5, 6, 7
 
-        **Example:**
-
-        .. code-block:: python
-            :caption: Example of `hsl_to_bgr` method
-
-            b, g, r = Color.hsl_to_bgr(0.5, 0.5, 0.5)
-
-    .. method:: adjust_bgr_intensity(base_color, intensity)
-
-        Adjusts the intensity of a BGR color.
-
-        **Parameters:**
-        - `base_color`: A tuple `(b, g, r)` representing the base color in BGR format.
-        - `intensity`: A `float` representing the intensity multiplier.
-
-        **Returns:**
-        - A tuple `(b, g, r)` representing the adjusted color in BGR format.
-
-        **Example:**
-
-        .. code-block:: python
-            :caption: Example of `adjust_bgr_intensity` method
-
-            adjusted_color = Color.adjust_bgr_intensity((255, 128, 0), 0.8)
+        @staticmethod
+        def adjust_bgr_intensity(base_color, intensity):
+            B, G, R = base_color
+            H, L, S = Color.bgr_to_hsl(B, G, R)
+            new_L = L * intensity
+            new_B, new_G, new_R = Color.hsl_to_bgr(H, new_L, S)
+            return (new_B, new_G, new_R)
