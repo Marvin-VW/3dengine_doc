@@ -21,7 +21,7 @@ The `Color` class contains numerous predefined colors and provides methods to ma
     - Returns a random color from the predefined set of colors.
 
     .. code-block:: python
-        :linenos:
+        :caption: :mod:`RandomColor` method
 
         @classmethod
         def RandomColor(cls):
@@ -41,7 +41,7 @@ The `Color` class contains numerous predefined colors and provides methods to ma
         The 'light intensity' is controlled by the Lightness component of the HSL model, which is why the :mod:`bgr_to_hsl` and :mod:`hsl_to_bgr` modules are used.
 
     .. code-block:: python
-        :linenos:
+        :caption: :mod:`intensity` method
 
         @staticmethod
         def intensity(light_direction, normal):
@@ -57,8 +57,7 @@ The `Color` class contains numerous predefined colors and provides methods to ma
     - Converts a BGR color tuple to an HSL (Hue, Saturation, Lightness) representation.
 
     .. code-block:: python
-        :linenos:
-        :emphasize-lines: 2, 3
+        :caption: :mod:`bgr_to_hsl` method
 
         @staticmethod
         def bgr_to_hsl(b, g, r):
@@ -71,8 +70,7 @@ The `Color` class contains numerous predefined colors and provides methods to ma
     - Converts HSL values back to a BGR tuple.
 
     .. code-block:: python
-        :linenos:
-        :emphasize-lines: 2, 3
+        :caption: :mod:`hsl_to_bgr` method
 
         @staticmethod
         def hsl_to_bgr(h, l, s):
@@ -86,8 +84,7 @@ The `Color` class contains numerous predefined colors and provides methods to ma
     - Adjusts the intensity of a BGR color by modifying its lightness.
 
     .. code-block:: python
-        :linenos:
-        :emphasize-lines: 5, 6, 7
+        :caption: :mod:`adjust_bgr_intensity` method
 
         @staticmethod
         def adjust_bgr_intensity(base_color, intensity):
