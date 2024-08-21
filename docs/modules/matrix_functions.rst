@@ -3,7 +3,7 @@
 Matrix Functions Module
 =======================
 
-This module defines the `Matrix_Functions` class, which provides functions for creating homogeneous transformation matrices.
+This module defines the :mod:`Matrix_Functions` class, which provides functions for creating homogeneous transformation matrices.
 
 The module consists of the following class:
 
@@ -116,7 +116,7 @@ The `Matrix_Functions` class offers methods to create rotation, translation, and
 
     .. method:: homogeneous_transformation(cls, window)
 
-        Computes the world-to-camera (`V_T_C`), camera-to-world (`C_T_V`), and world-to-cube (`V_T_Cube`) transformation matrices based on the window's camera and cube properties.
+        Computes the world-to-camera (:mod:`V_T_C`), camera-to-world (:mod:`C_T_V`), and cube-to-world (:mod:`V_T_Cube`) transformation matrices based on the window's camera and cube properties.
 
         **Parameters:**
 
@@ -128,7 +128,7 @@ The `Matrix_Functions` class offers methods to create rotation, translation, and
 
         - `C_T_V`: The camera-to-world transformation matrix (inverse of `V_T_C`).
 
-        - `V_T_Cube`: The world-to-cube transformation matrix.
+        - `V_T_Cube`: The cube-to-world transformation matrix.
 
         **Code:**
 

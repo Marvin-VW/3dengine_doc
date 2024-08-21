@@ -3,11 +3,7 @@
 Engine Module
 =============
 
-This module defines the `Engine` class, which acts as the core of the rendering engine. Here is the outlined code corresponding to the pipeline.
-
-The module consists of the following class:
-
-- `Engine`: Represents the main engine that controls the rendering loop.
+This module defines the :mod:`Engine` class, which acts as the core of the rendering engine. Here is the outlined code corresponding to the pipeline.
 
 .. class:: Engine()
 
@@ -26,12 +22,11 @@ The module consists of the following class:
     - **mesh_list**: List of 3D mesh objects to be transformed and rendered.
 
 
-
 **Methods**
 
     .. method:: __init__()
 
-        Initializes the `Engine` class by setting up the camera model, window, clipping space, FPS counter, and transformation matrices.
+        Initializes the :mod:`Engine` class by setting up the camera model, window, clipping space, FPS counter, and transformation matrices.
 
         **Code:**
 
@@ -153,7 +148,7 @@ The module consists of the following class:
 
     **Usage:**
 
-    To use the `Engine` class, simply create an instance and call the `main()` method to start the rendering loop.
+    To use the :mod:`Engine` class, simply create an instance and call the `main()` method to start the rendering loop.
 
     **Code:**
     

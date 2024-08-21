@@ -3,18 +3,18 @@
 Cube and Rectangle Module
 =========================
 
-This module contains classes that represent basic 3D shapes and operations. The primary classes are `Triangle4D`, `Cube`, and `Rectangle`. 
+This module contains classes that represent basic 3D shapes and operations. The primary classes are :mod:`Triangle4D`, :mod:`Cube`, and :mod:`Rectangle`. 
 
 - `Triangle4D`: A class representing a triangle in 4D space.
 
-- `Cube`: A class for creating and manipulating a 3D cube.
+- `Cube`: A class for creating a 3D cube.
 
-- `Rectangle`: A class for creating and manipulating a 3D rectangle.
+- `Rectangle`: A class for creating a 3D rectangle.
 
 
 .. class:: Triangle4D()
 
-   Initializes a `Triangle4D` instance with three points.
+   Initializes a :mod:`Triangle4D` instance with three points.
 
    **Parameters**:
 
@@ -102,7 +102,7 @@ This module contains classes that represent basic 3D shapes and operations. The 
 
    .. method:: generate_vertices(self, size: float):
 
-      Generates the vertices of the cube based on its size. After that, the mesh of the object is generated using the :mod:`Triangle4D` class, with each face consisting of 2 triangles.
+      Generates the vertices of the rectangle based on its size. After that, the mesh of the object is generated using the :mod:`Triangle4D` class, with each face consisting of 2 triangles.
 
       **Parameters**:
 

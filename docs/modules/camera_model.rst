@@ -3,11 +3,7 @@
 Camera Model Module
 ===================
 
-This module defines the :mod:`CameraModel` class, which provides various functions for handling camera transformations, drawing operations on images, and related computations.
-
-The module consists of the following class:
-
-- `CameraModel`: Represents a camera model that allows transformations and drawing operations on a virtual camera image.
+This module defines the :mod:`CameraModel` class, which provides functions for handling camera transformations, drawing operations on screen, and related computations.
 
 .. class:: CameraModel(sensor_width: float, sensor_height: float, focal_length: float, resolution_x: int, resolution_y: int, u0: int, v0: int)
 
@@ -29,7 +25,7 @@ The module consists of the following class:
 
     .. method:: __init__(sensor_width: float, sensor_height: float, focal_length: float, resolution_x: int, resolution_y: int, u0: int, v0: int)
         
-        Initializes the `CameraModel` class with the given sensor dimensions, focal length, image resolution, and principal point.
+        Initializes the :mod:`CameraModel` class with the given sensor dimensions, focal length, image resolution, and principal point.
 
         .. code-block:: python
             :caption: :mod:`__init__` method

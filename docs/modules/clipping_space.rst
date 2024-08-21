@@ -3,11 +3,7 @@
 Clipping Space Module
 =====================
 
-This module defines the `Clipping_Space` class, which clips triangles against planes (i.e., the view frustum).
-
-The module consists of the following class:
-
-- `Clipping_Space`: Represents the clipping space operations, including normalization and determining which parts of a 3D object are within the visible space.
+This module defines the :mod:`Clipping_Space` class, which clips triangles against planes (i.e., the view frustum).
 
 .. class:: Clipping_Space()
 
@@ -21,7 +17,7 @@ The module consists of the following class:
 
     .. method:: __init__()
 
-        Initializes the `Clipping_Space` class with a default normalization matrix matrix and border.
+        Initializes the :mod:`Clipping_Space` class with a default normalization matrix matrix and border.
 
         .. code-block:: python
             :caption: :mod:`__init__` method

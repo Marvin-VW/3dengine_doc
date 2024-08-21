@@ -5,15 +5,12 @@ Window Class
 
 The `Window Class` module provides a framework for handling a camera system's interaction with a 3D cube model. It includes functionalities such as window creation, camera movement, and interaction through mouse events and keyboard inputs.
 
-- `Window`: Handles the creation of windows, tracks camera and cube properties, and manages user interactions such as mouse events and keyboard inputs.
-
-
 .. class:: Window()
 
 
     .. method:: __init__()
 
-    The `__init__` method initializes the `Window` class by setting default values for camera and cube system parameters, window names, mouse state, and update intervals.
+    The :mod:`__init__` method initializes the :mod:`Window` class by setting default values for camera and cube system parameters, window names, mouse state, and update intervals.
 
     .. code-block:: python
         :caption: :mod:`__init__` method
@@ -54,7 +51,7 @@ The `Window Class` module provides a framework for handling a camera system's in
 
     .. method:: window_creator()
 
-    The `window_creator` method sets up the necessary OpenCV windows and trackbars for adjusting camera and cube parameters.
+    The :mod:`window_creator` method sets up the necessary OpenCV windows and trackbars for adjusting camera and cube parameters.
 
     .. code-block:: python
         :caption: :mod:`window_creator` method
@@ -97,7 +94,7 @@ The `Window Class` module provides a framework for handling a camera system's in
 
     .. method:: window_show()
 
-    The `window_show` method displays the current frame of the camera.
+    The :mod:`window_show` method displays the current frame of the camera.
 
     .. code-block:: python
         :caption: :mod:`window_show` method
@@ -131,7 +128,7 @@ The `Window Class` module provides a framework for handling a camera system's in
 
     .. method:: handle_movement()
 
-    The `handle_movement` method manages the camera's movement in response to keyboard inputs.
+    The :mod:`handle_movement` method manages the camera's movement in response to keyboard inputs.
 
     .. code-block:: python
         :caption: :mod:`handle_movement` method
@@ -162,7 +159,7 @@ The `Window Class` module provides a framework for handling a camera system's in
 
     .. method:: move_camera()
 
-    The `move_camera` method calculates the direction vectors based on the camera's current yaw and pitch and updates the camera's position accordingly.
+    The :mod:`move_camera` method calculates the direction vectors based on the camera's current yaw and pitch and updates the camera's position accordingly.
 
     .. note::
         This way, the camera movement using W, A, S, and D is not influenced by the direction you're looking at.
@@ -217,7 +214,7 @@ The `Window Class` module provides a framework for handling a camera system's in
 
     .. method:: mouse_event_handler()
 
-    The `mouse_event_handler` method handles the mouse interactions with the window, allowing users to rotate the camera view by dragging or clicking inside the window by right-click.
+    The :mod:`mouse_event_handler` method handles the mouse interactions with the window, allowing users to rotate the camera view by dragging or clicking inside the window by right-click.
 
     .. note:: 
         With the left click, you can drag your view like on Google Maps. With the right click, your mouse movement will control the camera, and a double right-click will exit this mode.

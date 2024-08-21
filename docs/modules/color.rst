@@ -3,12 +3,9 @@
 Color Module
 ============
 
-This module, named `camera_model`, provides functionalities for color manipulation and light intensity calculations. The primary class in this module is `Color`, which contains a variety of color constants and methods for color operations.
-
+This module, named :mod:`camera_model`, provides functionalities for color manipulation and light intensity calculations. The primary class in this module is :mod:`Color`, which contains a variety of color constants and methods for color operations.
 
 .. class:: Color()
-
-The `Color` class contains numerous predefined colors and provides methods to manipulate these colors and calculate light intensity.
 
     **Class Attributes**
 
@@ -38,7 +35,7 @@ The `Color` class contains numerous predefined colors and provides methods to ma
     - The result is then negated to ensure that positive values indicate illumination.
 
     .. note::
-        The 'light intensity' is controlled by the Lightness component of the HSL model, which is why the :mod:`bgr_to_hsl` and :mod:`hsl_to_bgr` modules are used.
+        The 'light intensity' is controlled by the Lightness component of the HSL model, which is why the :mod:`bgr_to_hsl` and :mod:`hsl_to_bgr` methods are used.
 
     .. code-block:: python
         :caption: :mod:`intensity` method

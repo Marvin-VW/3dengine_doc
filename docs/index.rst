@@ -55,5 +55,3 @@ Indices and Tables
 Use the indices and search functionality to quickly locate specific information within the documentation.
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`

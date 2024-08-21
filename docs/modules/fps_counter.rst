@@ -6,7 +6,6 @@ FpsCounter Module
 
 The `FpsCounter Module` module provides functionality to measure and track the frames per second (FPS) using the `FpsCounter` class. This class allows for real-time tracking of FPS and includes options to filter the FPS value over a window of time.
 
-
 .. class:: FpsCounter()
 
     **Initialization**
@@ -32,7 +31,7 @@ The `FpsCounter Module` module provides functionality to measure and track the f
 
     **Updating FPS**
 
-    The `update` method updates the current FPS value. It calculates the time difference between the last update and the current one to determine the FPS:
+    The :mod:`update` method updates the current FPS value. It calculates the time difference between the last update and the current one to determine the FPS:
 
     - `delta_time`: Time difference between the current and the last frame.
     - `fps`: Calculated as `1.0 / delta_time`, representing the frames per second.
@@ -60,8 +59,7 @@ The `FpsCounter Module` module provides functionality to measure and track the f
 
     **Getting FPS**
 
-    The `get_fps` method returns the latest FPS value calculated in the `update` method. This provides real-time FPS without any filtering.
-
+    The :mod:`get_fps` method returns the latest FPS value calculated in the :mod:`update` method. This provides real-time FPS without any filtering.
 
     .. method:: get_fps()
 
@@ -75,7 +73,7 @@ The `FpsCounter Module` module provides functionality to measure and track the f
 
     **Filtered** FPS**
 
-    The `get_fps_filtered` method returns a filtered FPS value, which is the average of the FPS values in the history list. This provides a more stable and smoothed FPS value over time.
+    The :mod:`get_fps_filtered` method returns a filtered FPS value, which is the average of the FPS values in the history list. This provides a more stable and smoothed FPS value over time.
 
     .. method:: get_fps_filtered()
 
