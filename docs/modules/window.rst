@@ -3,13 +3,7 @@
 Window Class
 ============
 
-Overview
---------
-
 The `Window Class` module provides a framework for handling a camera system's interaction with a 3D cube model. It includes functionalities such as window creation, camera movement, and interaction through mouse events and keyboard inputs.
-
-Classes
--------
 
 - `Window`: Handles the creation of windows, tracks camera and cube properties, and manages user interactions such as mouse events and keyboard inputs.
 

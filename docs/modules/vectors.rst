@@ -5,10 +5,8 @@ Calculate Normal and Shadow Module
 
 This module contains the `CalculateNormal` and `Shadow` classes, which provide methods for normal and vector calculation and shadow calculation.
 
-Class Overview
---------------
-
 1. **CalculateNormal**: A class that provides methods for calculating normal vectors of triangles in 3D space.
+
 2. **Shadow**: A class that provides methods for calculating shadow projections of 3D triangles onto a plane.
 
 

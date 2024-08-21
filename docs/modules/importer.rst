@@ -5,17 +5,12 @@ OBJ_Importer Module
 
 This module contains the classes and functions related to handling 4D objects and importing them from OBJ files.
 
-Overview
---------
-
 - **OBJ_Importer**: A static utility class for loading 3D models from OBJ files.
 - **Triangle4D**: A triangle consisting of 3 points in 3D space.
 
 .. note::
     The `Triangle4D` class is defined in the :ref:`Shape Module <shape_module>`.
 
-OBJ_Importer Class
-------------------
 
 The `OBJ_Importer` class provides methods to import 3D vertices and faces from an OBJ file and create corresponding 4D points and triangles. This is a static class, meaning its methods can be called without creating an instance of the class.
 

@@ -5,15 +5,9 @@ Camera Model Module
 
 This module defines the :mod:`CameraModel` class, which provides various functions for handling camera transformations, drawing operations on images, and related computations.
 
-Overview
---------
-
 The module consists of the following class:
 
 - `CameraModel`: Represents a camera model that allows transformations and drawing operations on a virtual camera image.
-
-Classes
--------
 
 .. class:: CameraModel(sensor_width: float, sensor_height: float, focal_length: float, resolution_x: int, resolution_y: int, u0: int, v0: int)
 

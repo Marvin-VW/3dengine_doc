@@ -5,15 +5,9 @@ Engine Module
 
 This module defines the `Engine` class, which acts as the core of the rendering engine. Here is the outlined code corresponding to the pipeline.
 
-Overview
---------
-
 The module consists of the following class:
 
 - `Engine`: Represents the main engine that controls the rendering loop.
-
-Class
------
 
 .. class:: Engine()
 
@@ -33,8 +27,8 @@ Class
 
 
 
-Methods:
----------
+**Methods**
+
     .. method:: __init__()
 
         Initializes the `Engine` class by setting up the camera model, window, clipping space, FPS counter, and transformation matrices.

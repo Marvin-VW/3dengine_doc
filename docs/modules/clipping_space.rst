@@ -5,15 +5,9 @@ Clipping Space Module
 
 This module defines the `Clipping_Space` class, which clips triangles against planes (i.e., the view frustum).
 
-Overview
---------
-
 The module consists of the following class:
 
 - `Clipping_Space`: Represents the clipping space operations, including normalization and determining which parts of a 3D object are within the visible space.
-
-Classes
--------
 
 .. class:: Clipping_Space()
 

@@ -5,21 +5,15 @@ Matrix Functions Module
 
 This module defines the `Matrix_Functions` class, which provides functions for creating homogeneous transformation matrices.
 
-Overview
---------
-
 The module consists of the following class:
 
 - `Matrix_Functions`: Creates matrices for world-to-camera, camera-to-world, and world-to-cube transformations, as well as for translation, rotation, and scaling.
 
-Classes
--------
-
 .. class:: Matrix_Functions()
 
-    The `Matrix_Functions` class offers methods to create rotation, translation, and scaling matrices.
+The `Matrix_Functions` class offers methods to create rotation, translation, and scaling matrices.
 
-    **Methods:**
+**Methods:**
 
     .. method:: DEG_TO_RAD(deg: float) -> float
 

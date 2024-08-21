@@ -3,13 +3,9 @@
 FpsCounter Module
 =================
 
-Overview
---------
 
 The `FpsCounter Module` module provides functionality to measure and track the frames per second (FPS) using the `FpsCounter` class. This class allows for real-time tracking of FPS and includes options to filter the FPS value over a window of time.
 
-Classes
--------
 
 .. class:: FpsCounter()
 

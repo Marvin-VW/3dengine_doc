@@ -5,15 +5,12 @@ Cube and Rectangle Module
 
 This module contains classes that represent basic 3D shapes and operations. The primary classes are `Triangle4D`, `Cube`, and `Rectangle`. 
 
-Overview of Classes
---------------------
-
 - `Triangle4D`: A class representing a triangle in 4D space.
+
 - `Cube`: A class for creating and manipulating a 3D cube.
+
 - `Rectangle`: A class for creating and manipulating a 3D rectangle.
 
-Class Documentation
---------------------
 
 .. class:: Triangle4D()
 
