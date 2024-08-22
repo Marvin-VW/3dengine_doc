@@ -38,21 +38,9 @@ If you're interested in understanding the inner workings of the engine, take a d
 .. toctree::
    :maxdepth: 2
 
-   modules/main
-   modules/shape
-   modules/importer
-   modules/camera_model
-   modules/matrix_functions
-   modules/vectors
-   modules/clipping_space
-   modules/window
-   modules/color
-   modules/fps_counter
    modules/backface_culling
 
 Indices and Tables
 ==================
 
 Use the indices and search functionality to quickly locate specific information within the documentation.
-
-* :ref:`genindex`
