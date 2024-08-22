@@ -39,7 +39,8 @@ If you're interested in understanding the inner workings of the engine, take a d
    :maxdepth: 2
 
    modules/backface_culling
-
+   modules/lighting_calculations
+   
 Indices and Tables
 ==================
 

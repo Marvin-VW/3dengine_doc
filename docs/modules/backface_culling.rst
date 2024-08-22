@@ -50,6 +50,8 @@ With Backface Culling the Cube would look like the following:
 
 I guess you can see the difference. But whats the math behind this technique?
 
+--------------------------------------------------------------------------------------------------------------------------
+
 1. **Surface Normals Calculation**: 
 Each polygon in a 3D object has a surface normal, which is a vector perpendicular to the polygon's surface. This normal helps determine the orientation of the polygon relative to the camera.
 
@@ -282,5 +284,33 @@ These normals are added to the final image if you have enabled that feature.
 
 ------------------------------------------------------------------------------------------------
 
+    .. code-block:: python
+
+        if self.is_triangle_facing_camera(triangle.normal, triangle.centroids, camera_vector_world) < 0.0:
+
 Lastly the Dot Product is used to keep only the faces visible to the camera, we need to eliminate all faces with a positive dot product. Therefore we use the following function:
 
+    .. method:: is_triangle_facing_camera(normal, tri, cam)
+
+        **Parameters:**
+        - `normal`: The normal vector of the triangle.
+        - `tri`: The centroid of the triangle.
+        - `cam`: The camera position vector.
+
+        **Returns:**
+
+        - The dot product, indicating whether the triangle is facing the camera (negative value) or not (positive value).
+
+        **Code:**
+
+        .. code-block:: python
+            :caption: :mod:`is_triangle_facing_camera`
+
+            def is_triangle_facing_camera(self, normal, tri, cam):
+                dot_product = ( normal[0] * (tri[0] - cam[0]) +
+                                normal[1] * (tri[1] - cam[1]) +
+                                normal[2] * (tri[2] - cam[2])   )
+                return dot_product
+
+
+Only triangles with a dot product less than 0.0 are further processed.
