@@ -11,20 +11,16 @@ These Module allow us to allows us to transform objects within our 3D space. Thi
 
    .. image:: ../resources/matrix/translation_matrix.png
     :width: 800
-    :alt: Alternative text
 
 - **Rotation Matrices**: Three separate matrices for rotating the object around the roll, pitch, and yaw axes (corresponding to rotations around the x, y, and z axes).
    
     .. image:: ../resources/matrix/real_rotation.png
         :width: 800
-        :alt: Alternative texts
 
 - **Scale Matrix**: Scales the object uniformly along all axes, which is especially useful for resizing objects in a 3D scene.
     
     .. image:: ../resources/matrix/scaling_matrix.png
         :width: 800
-        :alt: Alternative text
-
 
 ------------------------------------------------------------------------------------------------------------------------
 
