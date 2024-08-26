@@ -42,6 +42,10 @@ If you're interested in understanding the inner workings of the engine, take a d
    modules/lighting_calculations
    modules/homogeneous_transformation
    modules/clipping
+   modules/display
+   modules/starting_the_loop
+   modules/shadow
+   modules/init
    
 Indices and Tables
 ==================
