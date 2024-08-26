@@ -40,6 +40,7 @@ If you're interested in understanding the inner workings of the engine, take a d
 
    modules/backface_culling
    modules/lighting_calculations
+   modules/homogeneous_transformation
    
 Indices and Tables
 ==================

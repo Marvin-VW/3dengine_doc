@@ -16,16 +16,16 @@ In this module we are dealing with the following code snippet of the Engine Loop
 
             ...
 
-                if self.is_triangle_facing_camera(triangle.normal, triangle.centroids, camera_vector_world) < 0.0:
+            if self.is_triangle_facing_camera(triangle.normal, triangle.centroids, camera_vector_world) < 0.0:
 
-                    light_direction = (1, -0.5, -0.8)
-                    triangle.ilm = Color.intensity(light_direction, triangle.normal)
-                    triangle.color = Color.adjust_bgr_intensity(Color.ALICE_BLUE, triangle.ilm)
+                light_direction = (1, -0.5, -0.8)
+                triangle.ilm = Color.intensity(light_direction, triangle.normal)
+                triangle.color = Color.adjust_bgr_intensity(Color.ALICE_BLUE, triangle.ilm)
 
-                    triangle.camera_points = self.camera_model.world_transform(triangle.world_points, self.C_T_V)
-                    visiable_triangles.append(triangle)
+                triangle.camera_points = self.camera_model.world_transform(triangle.world_points, self.C_T_V)
+                visiable_triangles.append(triangle)
 
-                ...
+            ...
 
 The idea behind this module is quite simple. We use the dot product to determine how much the triangle and light vector overlap, and then use this value to adjust the color lightness.
 
@@ -63,16 +63,16 @@ Now that you know the theoretical math behind this module, let's dive into the i
 
             ...
 
-                if self.is_triangle_facing_camera(triangle.normal, triangle.centroids, camera_vector_world) < 0.0:
+            if self.is_triangle_facing_camera(triangle.normal, triangle.centroids, camera_vector_world) < 0.0:
 
-                    light_direction = (1, -0.5, -0.8)
-                    triangle.ilm = Color.intensity(light_direction, triangle.normal)
-                    triangle.color = Color.adjust_bgr_intensity(Color.ALICE_BLUE, triangle.ilm)
+                light_direction = (1, -0.5, -0.8)
+                triangle.ilm = Color.intensity(light_direction, triangle.normal)
+                triangle.color = Color.adjust_bgr_intensity(Color.ALICE_BLUE, triangle.ilm)
 
-                    triangle.camera_points = self.camera_model.world_transform(triangle.world_points, self.C_T_V)
-                    visiable_triangles.append(triangle)
+                triangle.camera_points = self.camera_model.world_transform(triangle.world_points, self.C_T_V)
+                visiable_triangles.append(triangle)
 
-                ...
+            ...
 
 ------------------------------------------------------------------------------------------------------------
 
