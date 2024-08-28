@@ -2,8 +2,6 @@
 Basic 3D Engine Python
 ==============================
 
-Welcome to the 3D Engine documentation!
-
 .. image:: /resources/space/world_space.png
   :width: 800
 
@@ -32,6 +30,7 @@ For a better grasp of how this 3D engine works, check out the render pipeline. I
    :maxdepth: 1
 
    modules/3dengine_theo
+   modules/example
    pipeline
 
 Exploring the Modules
@@ -40,20 +39,20 @@ Exploring the Modules
 If you're interested in understanding the inner workings of the engine, take a deeper look into the documentation for each module. These sections will provide detailed explanations of the core components, including shapes, camera models, matrix transformations, and more.
 
 .. toctree::
+   :maxdepth: 1
 
-   modules/backface_culling
-   modules/lighting_calculations
-   modules/homogeneous_transformation
-   modules/clipping
-   modules/display
-   modules/starting_the_loop
-   modules/shadow
    modules/init
    modules/importer
-   modules/example
+   modules/starting_the_loop
+   modules/homogeneous_transformation
+   modules/backface_culling
+   modules/lighting_calculations
    modules/depth_sorting
+   modules/shadow
+   modules/clipping
    modules/rendering
-   
+   modules/display
+
 Indices and Tables
 ==================
 

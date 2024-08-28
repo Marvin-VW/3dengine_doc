@@ -69,7 +69,7 @@ Cartesian vs. Homogeneous Coordinates in 3D Engines
 
 **Cartesian Coordinates**
 
-In 3D space, Cartesian coordinates are the most straightforward way to describe a point. A point is typically represented as \( (x, y, z) \), where each value corresponds to the position along the X, Y, and Z axes. This system is intuitive and works well for basic positioning and geometry.
+In 3D space, Cartesian coordinates are the most straightforward way to describe a point. A point is typically represented as (x, y, z), where each value corresponds to the position along the X, Y, and Z axes. This system is intuitive and works well for basic positioning and geometry.
 
 However, Cartesian coordinates have limitations when it comes to performing more complex operations such as transformations, especially in the context of 3D graphics. For example, if you want to translate (move) a point in space, you would normally need to add a translation vector to it. This approach requires handling translations separately from other transformations like rotation or scaling, which complicates the mathematical operations involved.
 
