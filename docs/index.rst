@@ -46,6 +46,7 @@ If you're interested in understanding the inner workings of the engine, take a d
    modules/starting_the_loop
    modules/shadow
    modules/init
+   modules/importer
    
 Indices and Tables
 ==================
