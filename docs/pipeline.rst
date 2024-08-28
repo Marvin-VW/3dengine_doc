@@ -1,77 +1,60 @@
+
+
 ===========================
 3D Engine Pipeline Overview
 ===========================
 
 This document outlines the pipeline of the 3D engine, detailing the steps from object creation to the final rendering of a scene.
 
+.. note::
+    Click on each module in the image to view details about each one.
+
 Pipeline Stages
 ===============
 
-.. image:: /resources/loop.svg
-    :width: 400
-    :align: left
-
-
-
 .. raw:: html
 
-    <br><br><br><br><br><br><br><br>
+    <img src="/.tox/docs/tmp/html/00.png" width="400" style="float: left; padding: 0; margin: 0;" />
 
-:ref:`-> Import Module <import_module>`
+    <a href="/.tox/docs/tmp/html/modules/init.html">
+        <img src="/.tox/docs/tmp/html/01.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-:ref:`-> Shape Module <shape_module>`
+    <img src="/.tox/docs/tmp/html/02.png" width="400" style="float: left; padding: 0; margin: 0;" />
 
-.. raw:: html
+    <a href="/.tox/docs/tmp/html/modules/starting_the_loop.html">
+        <img src="/.tox/docs/tmp/html/03.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-    <br><br><br><br><br><br><br><br><br>
+    <a href="/.tox/docs/tmp/html/modules/backface_culling.html">
+        <img src="/.tox/docs/tmp/html/04.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
+    <a href="modules/lighting_calculations.html">
+        <img src="/.tox/docs/tmp/html/05.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-:ref:`-> Starting Module <starting_the_loop>`
+    <a href="/.tox/docs/tmp/html/modules/depth_sorting.html">
+        <img src="/.tox/docs/tmp/html/06.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-.. raw:: html
+     <a href="/.tox/docs/tmp/html/modules/depth_sorting.html">
+        <img src="/.tox/docs/tmp/html/07.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-    <br><br><br><br>
+    <a href="/.tox/docs/tmp/html/modules/shadow.html">
+        <img src="/.tox/docs/tmp/html/08.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-:ref:`-> Homogeneous Module <homogeneous_module>`
+    <a href="/.tox/docs/tmp/html/modules/clipping.html">
+        <img src="/.tox/docs/tmp/html/09.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-.. raw:: html
+    <a href="/.tox/docs/tmp/html/modules/rendering.html">
+        <img src="/.tox/docs/tmp/html/010.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-    <br><br><br><br>
+    <a href="/.tox/docs/tmp/html/modules/display.html">
+        <img src="/.tox/docs/tmp/html/011.png" width="400" style="float: left; padding: 0; margin: 0;" />
+    </a>
 
-:ref:`-> Backface Culling Module <backface_culling_model>`
-
-.. raw:: html
-
-    <br><br><br><br>
-
-:ref:`-> Light Module <light_module>`
-
-.. raw:: html
-
-    <br><br><br><br>
-
-:ref:`-> Depth Sorting Module <depth_sorting>`
-
-.. raw:: html
-
-    <br><br><br><br>
-
-:ref:`-> Shadow Module <shadow>`
-
-.. raw:: html
-
-    <br><br><br><br>
-
-:ref:`-> Clipping Module <clipping_module>`
-
-.. raw:: html
-
-    <br><br><br><br>
-
-:ref:`-> Rendering Module <rendering>`
-
-.. raw:: html
-
-    <br><br><br><br>
-
-:ref:`-> Display Module <display>`
