@@ -50,6 +50,12 @@ Pipeline Stages
 
     <br><br><br><br>
 
+:ref:`-> Depth Sorting Module <depth_sorting>`
+
+.. raw:: html
+
+    <br><br><br><br>
+
 :ref:`-> Shadow Module <shadow>`
 
 .. raw:: html
@@ -57,6 +63,12 @@ Pipeline Stages
     <br><br><br><br>
 
 :ref:`-> Clipping Module <clipping_module>`
+
+.. raw:: html
+
+    <br><br><br><br>
+
+:ref:`-> Rendering Module <rendering>`
 
 .. raw:: html
 

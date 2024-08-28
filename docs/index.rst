@@ -28,6 +28,7 @@ For a better grasp of how this 3D engine works, check out the render pipeline. I
 .. toctree::
    :maxdepth: 1
 
+   modules/3dengine_theo
    pipeline
 
 Exploring the Modules
@@ -47,6 +48,9 @@ If you're interested in understanding the inner workings of the engine, take a d
    modules/shadow
    modules/init
    modules/importer
+   modules/example
+   modules/depth_sorting
+   modules/rendering
    
 Indices and Tables
 ==================
