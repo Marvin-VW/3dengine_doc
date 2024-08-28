@@ -4,6 +4,9 @@ Basic 3D Engine Python
 
 Welcome to the 3D Engine documentation!
 
+.. image:: ../resources/space/world_space.png
+  :width: 800
+
 This project is a 3D engine written in Python using OpenCV and NumPy. The engine includes features such as backface culling, object clipping, basic lighting, and FPS calculation. Below, you will find comprehensive documentation covering the various modules and classes used in this project.
 
 .. note::
@@ -37,7 +40,6 @@ Exploring the Modules
 If you're interested in understanding the inner workings of the engine, take a deeper look into the documentation for each module. These sections will provide detailed explanations of the core components, including shapes, camera models, matrix transformations, and more.
 
 .. toctree::
-   :maxdepth: 2
 
    modules/backface_culling
    modules/lighting_calculations
